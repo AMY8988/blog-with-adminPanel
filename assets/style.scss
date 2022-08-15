@@ -1,0 +1,174 @@
+$primary:#c9ada7;
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  #9a8c98,
+  "light"  : #f2e9e4
+);
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+
+body{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+
+.sidebar{
+    // overflow: scroll;
+}
+
+.nav-menu{
+
+}
+.nav-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-title{
+    padding:  5px 0;
+    text-transform: uppercase;
+}
+
+
+
+.menu-item{
+    padding: 5px ;
+    transition: 0.3s;
+}
+
+.Active{
+    background-color: #4a4e69 !important;
+    border-radius: 0.25rem;
+}
+
+.Active a{
+    color: white;
+}
+
+.menu-item-link{
+    text-decoration: none;
+    transition: 0.3s;
+    color: black;
+}
+
+.menu-item-link:hover{
+    color: white;
+}
+
+.menu-item:hover{
+    background-color: #9a8c98;
+    border-radius: 0.25rem;
+}
+
+.menu-spacer{
+     padding: 5px;
+}
+
+.header{
+    box-shadow: 0 0 10px #0a0a0a50;
+}
+
+.profile{
+    width: 40px;
+    height: auto;
+}
+
+.fa-circle-xmark{
+  cursor: pointer;
+}
+
+.content{
+    background-color: var(--primary-soft);
+    overflow: scroll;
+    box-shadow: 0 0 15px #bdbdbd inset ;
+}
+
+
+
+.form input{
+    height: 35px;
+}
+
+
+
+.show-sidebar:focus,.hide-sidebar:focus{
+    box-shadow: none;
+}
+
+.card{
+    border: none;
+}
+
+.status-card{
+    transition: 0.3s;
+}
+
+.status-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0  10px #c0c0c0;
+}
+
+.status-card:active{
+    transform: scale(1.03);
+   
+}
+
+.item-carousel{
+    margin-top: -130px;
+}
+
+
+
+.item-card-img{
+    height: 250px;
+}
+
+.subscriber-list{
+    cursor: pointer;
+}
+
+.sub-list tr{
+  transition: 0.3s;
+}
+
+.sub-list tr:active{
+   transform: scale(1.01);
+}
+
+.full-screen-card{
+    position: absolute;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.example{
+    height: 100vh;
+}
+
+/* @media screen and (max-width: 992px){
+    .order-viewer{
+        margin-bottom: 130px;
+    }
+} */
+
+@media screen and  (max-width: 768px){
+
+    .sidebar{
+        display: block !important; 
+        position: fixed;
+        width: 250px;
+        z-index: 2000;
+        margin-left: -100%;
+    }
+
+    .order-place{
+        margin-top: 100px;
+    }
+
+    
+}
