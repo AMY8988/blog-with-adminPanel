@@ -1,3 +1,4 @@
+<?php include "core/auth.php" ?>
 <?php include "template/header.php";?>
 
     <!-- breadcrumb -->
@@ -21,7 +22,7 @@
                     <!-- add-item header -->
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class=" mb-0">
-                            <i class="fa-solid fa-layer-group text-primary h6"></i>
+                            <i class="fa-solid fa-layer-group text-primary "></i>
                             Edit Category
                         </h5>
                         <a href="<?php echo $url ?>template/category-list.php" class="border px-1 rounded border-1 border-primary">

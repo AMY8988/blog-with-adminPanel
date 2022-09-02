@@ -51,6 +51,7 @@
                                 <?php if($_SESSION['user']['role'] ==0 ){  ?>
                                     <th>User</th>
                                 <?php } ?>
+                                <th>Post Views</th>
                                 <th >Control</th>
                                 <th class="text-nowrap">Created-at</th>
                             </tr>
@@ -70,6 +71,9 @@
                                     <?php if($_SESSION['user']['role'] ==0 ){  ?>
                                     <td class="text-nowrap"> <?php print_r(user($post['user_id'])['name']); ?></td>
                                     <?php } ?>
+                                    <td>
+                                        <?php echo count(viewerByPost($post['id'])) ?>
+                                    </td>
                                     <td  class="text-nowrap">
 
                                         <a class='btn  btn-sm border border-0 btn-outline-info' type="button" data-bs-toggle="tooltip" title="post detail" href='post_detail.php?id=<?php echo $post['id']; ?>'>

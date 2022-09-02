@@ -1,6 +1,6 @@
 
 
-<table  id="example" class="display table-hover my-4">
+<table   class="table display table-hover my-4">
     <thead class="">
     <tr>
         <th>#</th>
@@ -15,7 +15,7 @@
     <?php
     foreach (categories() as $category){
         ?>
-        <tr>
+        <tr class="<?php echo $category['ordering']==1?'bg-light':''; ?>">
             <td><?php echo $category['id']; ?></td>
             <td><?php echo $category['title']; ?></td>
             <td><?php print_r(user($category['user_id'])['name']); ?></td>
@@ -26,6 +26,17 @@
                 <a class='btn btn-sm border border-0  btn-outline-success' href='category_edit.php?id=<?php echo $category['id']; ?>'>
                     <i class='fa-solid fa-edit'></i>
                 </a>
+                <?php if($category['ordering'] != 0){ ?>
+                    <a class="btn btn-sm border border-0  btn-outline-info text-primary  " href='category-remove-pin.php'>
+                        <i class="fa-solid fa-thumbtack "></i>
+                    </a>
+                <?php }else{ ?>
+                    <a class="btn btn-sm border border-0  btn-outline-info text-black  " href='category-pin-to-top.php?id=<?php echo $category['id']; ?>'>
+                        <i class="fa-solid fa-thumbtack "></i>
+                    </a>
+                <?php } ?>
+
+
             </td>
             <td><?php echo day($category['created_at']); ?></td>
         </tr>

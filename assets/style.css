@@ -4,7 +4,7 @@
    * Copyright 2011-2022 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -12035,6 +12035,29 @@ fieldset:disabled .btn {
   }
 }
 
+/*front panel*/
+.post {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.post:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0 3px 15px #00000020 !important;
+          box-shadow: 0 3px 15px #00000020 !important;
+}
+
+.front-panel-sideBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 220px;
+}
+
+.post a:hover {
+  color: #C9ADA7 !important;
+}
+
 body {
   font-family: 'Poppins', sans-serif !important;
 }
@@ -12169,6 +12192,16 @@ body {
 
 .example {
   height: 100vh;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border: none !important;
+  color: #4a4e69 !important;
+  background-color: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover .page-link {
+  background-color: #C9ADA7;
 }
 
 /* @media screen and (max-width: 992px){

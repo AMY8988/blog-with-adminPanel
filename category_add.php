@@ -2,6 +2,7 @@
 <?php require_once "core/isAdmin&editor.php"; ?>
 <?php include "template/header.php"; ?>
 
+
     <!-- breadcrumb start-->
     <div class="row">
         <div class="col-12 my-2">
@@ -22,16 +23,12 @@
 
             <div class="card">
                 <div class="card-body">
-                    <!-- add-item header -->
+                    <!-- add-category header -->
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class=" mb-0">
                             <i class="fa-solid fa-layer-group text-primary "></i>
                             Add Category
                         </h5>
-                        <a href="<?php echo $url ?>template/category-list.php" class="border px-1 rounded border-1 border-primary">
-                            <i class="fa-solid fa-list text-primary"></i>
-                        </a>
-
                     </div>
 
                     <hr>

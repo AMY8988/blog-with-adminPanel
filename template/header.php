@@ -30,7 +30,7 @@
         <!--   nav-bar-->
         <div class=" col-sm-12 col-md-9 col-xl-10 vh-100 py-2 content">
 
-            <div class="row px-1 sticky-top">
+            <div class="row px-2 sticky-top">
 
                 <div class="col-12 d-flex justify-content-between align-items-center bg-primary p-2 px-3 rounded header  ">
 

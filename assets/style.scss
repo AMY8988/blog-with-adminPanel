@@ -5,9 +5,30 @@ $theme-colors: (
   "light"  : #f2e9e4
 );
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 
+/*front panel*/
+.post{
+    transition: 0.5s;
+}
 
+.post:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 3px 15px #00000020 !important ;
+}
+  
+.front-panel-sideBar{
+    position: sticky;
+    top: 220px;
+}
+
+.post{
+    a:hover{
+        color: #C9ADA7 !important;
+    }
+}
+
+//admin panel start
 body{
     font-family: 'Poppins', sans-serif !important;
 }
@@ -149,6 +170,15 @@ body{
 .example{
     height: 100vh;
 }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    border: none !important;
+    color: #4a4e69 !important;
+    background-color: none !important;
+    .page-link{
+        background-color: #C9ADA7;
+    }
+} 
 
 /* @media screen and (max-width: 992px){
     .order-viewer{

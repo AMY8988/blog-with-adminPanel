@@ -28,15 +28,6 @@
                         <i class="fa-solid fa-user-group text-primary "></i>
                         User list
                     </h5>
-                    <div class="">
-                        <a href="#" class="border px-1 rounded border-1 border-primary me-1 full-screen-btn" style="text-decoration: none;">
-                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                        </a>
-
-                        <a href="<?php echo $url ?>template/add-item.php" class="border px-1 rounded border-1 border-primary">
-                            <i class="fa-solid fa-plus-circle text-primary"></i>
-                        </a>
-                    </div>
                 </div>
 
                 <hr>
@@ -47,8 +38,8 @@
                         <th width="5%" >#</th>
                         <th>Name</th>
                         <th >role</th>
-                        <th>Control</th>
                         <th>Created-at</th>
+                        <th>Control</th>
                     </tr>
                     </thead>
 
@@ -61,16 +52,13 @@
                             <td class="text-center"><?php echo $user['id']; ?></td>
                             <td><?php  echo $user['name']; ?></td>
                             <td><?php echo $role[$user['role']]; ?></td>
+                            <td><?php echo day($user['created_at']); ?></td>
                             <td>
                                 <a  onclick="return confirm('are you sure to delete this post')" class='btn btn-sm border border-0  btn-outline-danger' href='post_delete.php?id=<?php echo $post['id']; ?>'>
                                     <i class='fa-solid fa-trash-can'></i>
                                 </a>
 
-                                <a class='btn  btn-sm border border-0 btn-outline-success ' href='post_edit.php?id=<?php echo $user['id']; ?>'>
-                                    <i class='fa-solid fa-edit'></i>
-                                </a>
                             </td>
-                            <td><?php echo day($user['created_at']); ?></td>
                         </tr>
                     <?php }; ?>
 

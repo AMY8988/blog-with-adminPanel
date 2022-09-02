@@ -9,7 +9,7 @@
                 <div class="bg-primary  p-1 rounded-circle me-2">
                     <i class="fa-solid fa-briefcase p-1 text-light"></i>
                 </div>
-                <h5 class="m-0">My Shop</h5>
+                <h5 class="m-0">My Blog</h5>
             </div>
             <button class="btn hide-sidebar d-block d-md-none">
                 <i class="fa-solid fa-circle-xmark"></i>
@@ -26,6 +26,51 @@
                 </a>
             </li>
 
+            <li class="menu-item  ">
+                <a href="<?php echo $url; ?>index.php" class="menu-item-link  ">
+                    <i class="fa-solid fa-folder-open"></i>
+                    Blog page
+                </a>
+            </li>
+
+            <li class="menu-spacer"></li>
+
+            <li class="menu-title text-black-50 fw-bolder">
+                Payment
+            </li>
+            <li class="menu-item">
+                <a href="<?php echo $url; ?>wallet.php" class="menu-item-link">
+                    <div class="d-flex justify-content-between align-items-center">
+                                    <span>
+                                        <i class="fa-solid fa-wallet"></i>
+                                        my wallet
+                                    </span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu-spacer"></li>
+
+            <?php if($_SESSION['user']['role'] == 0){ ?>
+            <li class="menu-title text-black-50 fw-bolder">
+                Manage Ads
+            </li>
+            <li class="menu-item">
+                <a href="<?php echo $url ?>ads_add.php" class="menu-item-link">
+                    <div class="d-flex justify-content-between align-items-center">
+                                    <span>
+                                        <i class="fa-brands fa-adversal"></i>
+                                        Add Ads
+                                    </span>
+                        <!--                        <span class=" badge rounded-pill bg-light text-black-50  shadow ">23</span>-->
+                    </div>
+                </a>
+            </li>
+            <?php }; ?>
+
+            <li class="menu-spacer"></li>
+
+
             <li class="menu-title text-black-50 fw-bolder">
                 Manage Item
             </li>
@@ -41,6 +86,7 @@
                 </a>
             </li>
             <li class="menu-item">
+
                 <a href="<?php echo $url ?>post-list.php" class="menu-item-link">
                     <div class="d-flex justify-content-between align-items-center">
                                      <span>
