@@ -9,7 +9,7 @@
     <title>DashBoard</title>
 
     <link rel="stylesheet" href="<?php echo $url; ?>assets/css/style.css">
-    <link rel="stylesheet" href="<?php echo $url; ?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo $url; ?>node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>assets/vendor/dataTable/jquery.dataTables.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>assets/vendor/dataTable/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>assets/vendor/fontawesome/css/all.css">
@@ -26,7 +26,7 @@
 
                         <h3 class="text-center p-2 text-primary">
                             <i class="fa-solid fa-user-group"></i>
-                            Regitster Form
+                            Register Form
                         </h3>
 
                         <?php

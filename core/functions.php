@@ -150,8 +150,10 @@ function viewerByUser($userId){
 
 //category start
 
+
+
 function categoryAdd(){
-    $title = $_POST['title'];
+    $title = textFilter($_POST['title']);
     $user_id = $_SESSION['user']['id'];
     $sql = "INSERT INTO `categories` (`title`,`user_id`) VALUES ('$title' , '$user_id')";
     if(runQuery($sql)){
@@ -203,10 +205,20 @@ function categoryRemovePin(){
 //category end
 
 //post start
+
+function isCategoryId($id){
+    if(category($id)){
+        return $id;
+    }else{
+
+         die(alert('Category is unavaliable','secondary'));
+    }
+}
+
 function postAdd(){
     $title = textFilter($_POST['title']);
     $description = textFilter($_POST['description']);
-    $category_id = $_POST['category_id'];
+    $category_id = isCategoryId($_POST['category_id']);
     $user_id = $_SESSION['user']['id'];
     $sql = "INSERT INTO `posts` (`title`,`user_id`,`description`,`category_id`) VALUES ('$title' , '$user_id','$description','$category_id')";
 
@@ -358,4 +370,12 @@ function dashboardPosts($limit=9999999){
     return fetchAll($sql);
 }
 //dashboard end
+
+//api start
+
+function apiOutPut($arr){
+    echo json_encode($arr);
+}
+
+//api end
 

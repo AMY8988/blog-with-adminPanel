@@ -1,5 +1,5 @@
-<?php require_once "./core/base.php"?>
-<?php require_once "./core/functions.php"?>
+<?php require "./core/base.php"?>
+<?php require "./core/functions.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashBoard</title>
 
-    <link rel="stylesheet" href="<?php echo $url; ?>assets/css/style.css">
-    <link rel="stylesheet" href="<?php echo $url; ?>assets/css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo $url; ?>assets/style.css">
+    <link rel="stylesheet" href="<?php echo $url; ?>node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>assets/vendor/dataTable/jquery.dataTables.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>assets/vendor/dataTable/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>assets/vendor/fontawesome/css/all.css">

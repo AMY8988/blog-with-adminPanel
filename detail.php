@@ -3,11 +3,20 @@
 <title>Home</title>
 <?php require_once "front-panel/side-header.php"?>
 <?php
-$id=$_GET['id'];
-$current = post($id);
+if(isset($_GET['id'])){
+    $id=$_GET['id'];
+    $current = post($id);
+
+}else{
+    linkTo('index.php');
+}
+
+if(!$current){
+    linkTo('index.php');
+}
+
+
 $currentCatId = $current['category_id'];
-
-
 
 if(isset($_SESSION['user']['id'])){
     $userId = $_SESSION['user']['id'];

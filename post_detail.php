@@ -1,6 +1,7 @@
 <?php include "core/auth.php"?>
 <?php include "template/header.php";?>
 <?php
+
  $id=$_GET['id'];
  $current = post($id);
 ?>

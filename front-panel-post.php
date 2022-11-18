@@ -11,7 +11,7 @@
             </div>
             <div class="me-2 h6">
                 <i class="fa-solid fa-layer-group"></i>
-                <?php echo category($post['category_id'])['title'] ;?>
+                <?php echo category($post['category_id'])['title']; ?>
             </div>
             <div class="me-2 h6">
                 <i class="fa-solid fa-calendar"></i>

@@ -49,7 +49,7 @@
                 }
 
                 foreach ($posts as $post){
-                    ?>
+                ?>
                     <?php include "front-panel-post.php"; ?>
                 <?php }; ?>
             </div>
