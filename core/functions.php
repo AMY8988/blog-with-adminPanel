@@ -80,7 +80,7 @@ function register(){
         if(runQuery($sql)){
             return redirect("login.php");
         }
-
+        //$2y$10$wSa2XI0RxTsMi
 
     }else{
         return alert("Password don't match");
@@ -98,11 +98,13 @@ function logIn(){
 
     if(!$row){
         // email မှားရင်ထွက်မယ့် error
+        print_r($password . $email  . "aaa");
         return alert("Email or Password don't match");
     }else{
-
         if(!password_verify($password , $row['password'])){
             //password မှားရင် ထွက်မယ့် error
+            //print_r($row);
+            print($password . $row['password'] . "password error");
             return  alert("Email or Password don't match");
         }else{
           session_start();
@@ -378,4 +380,3 @@ function apiOutPut($arr){
 }
 
 //api end
-

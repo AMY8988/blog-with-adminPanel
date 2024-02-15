@@ -12,4 +12,4 @@ $info = array(
 
 $role = ["admin" ,"editor" , "user"];
 
-$url = "http://{$_SERVER["HTTP_HOST"]}/MMS%20IT%20php_basic/Blog/" ;
+$url = "http://{$_SERVER["HTTP_HOST"]}/blog-with-adminpanel/" ;
